@@ -199,6 +199,83 @@
                 margin-right: auto;
             }
         }
+    /* ЭКРАН 3 — РЕШЕНИЕ */
+.solution {
+    padding: 80px 24px;
+    background: #FDF8F3;
+}
+
+.solution-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.solution-title {
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 32px;
+    color: #1a1a1a;
+    line-height: 1.2;
+}
+
+.solution-intro {
+    text-align: center;
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.solution-steps {
+    background: #fff;
+    border-radius: 16px;
+    padding: 32px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.step {
+    padding: 16px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+.step:last-child {
+    border-bottom: none;
+}
+
+.step-name {
+    font-weight: 700;
+    color: #0088cc;
+}
+
+.step-desc {
+    color: #444;
+}
+
+.solution-result {
+    background: #0088cc;
+    border-radius: 16px;
+    padding: 32px;
+    text-align: center;
+}
+
+.result-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.8);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.result-text {
+    font-size: 18px;
+    color: #fff;
+    line-height: 1.6;
+}
     </style>
 </head>
 <body>
@@ -264,5 +341,47 @@
 </p>
         </div>
     </section>
+    <!-- ЭКРАН 3 — РЕШЕНИЕ -->
+<section class="solution">
+    <div class="solution-container">
+        <h2 class="solution-title">Драматургический квиз<br>смотрят как сериал</h2>
+        
+        <p class="solution-intro">
+            Не «ответь на 5 вопросов и скачай PDF».<br>
+            А интерактивная история с драматургией:
+        </p>
+        
+        <div class="solution-steps">
+            <div class="step">
+                <span class="step-name">Завязка</span>
+                <span class="step-desc">— человек узнаёт свою ситуацию</span>
+            </div>
+            <div class="step">
+                <span class="step-name">Расследование</span>
+                <span class="step-desc">— отвечает на вопросы, которые заставляют думать</span>
+            </div>
+            <div class="step">
+                <span class="step-name">Твист</span>
+                <span class="step-desc">— видит причину, которую раньше не замечал</span>
+            </div>
+            <div class="step">
+                <span class="step-name">Финал</span>
+                <span class="step-desc">— получает диагноз + 3 конкретных шага</span>
+            </div>
+            <div class="step">
+                <span class="step-name">Мягкий CTA</span>
+                <span class="step-desc">— логичное приглашение к вам (не «купи сейчас», а «давай разберём»)</span>
+            </div>
+        </div>
+        
+        <div class="solution-result">
+            <p class="result-label">Результат:</p>
+            <p class="result-text">
+                Люди досматривают до конца и пишут «откуда вы знаете про меня».<br>
+                Получаете другой уровень заявок. Интерес к вашему продукту и просьба о помощи.
+            </p>
+        </div>
+    </div>
+</section>
 </body>
 </html>
