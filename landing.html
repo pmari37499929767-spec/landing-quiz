@@ -381,6 +381,94 @@
     font-size: 16px;
   }
 }
+
+/* ЭКРАН 5 — ДЕМО */
+.demo {
+  padding: 100px 20px;
+  background: #f5f7fa;
+}
+
+.demo__title {
+  font-family: 'Manrope', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.demo__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.demo__card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.demo__card:hover {
+  transform: scale(1.8);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+  z-index: 100;
+  position: relative;
+}
+
+.demo__screenshot {
+  width: 100%;
+  background: #e8edf2;
+  overflow: hidden;
+}
+
+.demo__screenshot img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.demo__caption {
+  font-family: 'Manrope', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  text-align: center;
+  padding: 20px 16px;
+  margin: 0;
+}
+
+/* Адаптив ЭКРАН 5 */
+@media (max-width: 768px) {
+  .demo {
+    padding: 70px 20px;
+  }
+
+  .demo__title {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+
+  .demo__cards {
+    grid-template-columns: 1fr;
+    max-width: 320px;
+    gap: 24px;
+  }
+
+  .demo__card:hover {
+    transform: scale(1.1);
+  }
+
+  .demo__caption {
+    font-size: 15px;
+  }
+}
     </style>
 </head>
 <body>
@@ -533,6 +621,36 @@
     <div class="deliverables__bonus">
       <span class="deliverables__bonus-label">Побочный эффект:</span>
       каждый "подозреваемый" из квиза = тема для поста, рилса, эфира. У вас появляется свой контент-завод.
+    </div>
+  </div>
+</section>
+
+<!-- ЭКРАН 5 — ДЕМО -->
+<section class="demo">
+  <div class="container">
+    <h2 class="demo__title">В демо вы увидите, как квиз-бот:</h2>
+
+    <div class="demo__cards">
+      <div class="demo__card">
+        <div class="demo__screenshot">
+          <img src="images/screenshot-1.png" alt="Скриншот: удержание до финала">
+        </div>
+        <p class="demo__caption">удерживает до финала</p>
+      </div>
+
+      <div class="demo__card">
+        <div class="demo__screenshot">
+          <img src="images/screenshot-2.png" alt="Скриншот: разные результаты">
+        </div>
+        <p class="demo__caption">выдаёт разные результаты людям</p>
+      </div>
+
+      <div class="demo__card">
+        <div class="demo__screenshot">
+          <img src="images/screenshot-3.png" alt="Скриншот: консультация без давления">
+        </div>
+        <p class="demo__caption">ведёт в консультацию без давления</p>
+      </div>
     </div>
   </div>
 </section>
