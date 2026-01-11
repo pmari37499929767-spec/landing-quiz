@@ -276,6 +276,111 @@
     color: #fff;
     line-height: 1.6;
 }
+
+/* ЭКРАН 4 — ЧТО ВЫ ПОЛУЧАЕТЕ */
+.deliverables {
+  padding: 100px 20px;
+  background: #ffffff;
+}
+
+.deliverables__title {
+  font-family: 'Manrope', sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  color: #1a1a2e;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.deliverables__subtitle {
+  font-family: 'Manrope', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #555;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.deliverables__list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.deliverables__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.deliverables__check {
+  font-size: 22px;
+  color: #0088cc;
+  font-weight: 700;
+  flex-shrink: 0;
+  line-height: 1.5;
+}
+
+.deliverables__text {
+  font-family: 'Manrope', sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.deliverables__text strong {
+  font-weight: 600;
+  color: #1a1a2e;
+}
+
+.deliverables__bonus {
+  margin-top: 50px;
+  padding: 28px 32px;
+  background: linear-gradient(135deg, #f0f8ff 0%, #e6f3ff 100%);
+  border-left: 4px solid #0088cc;
+  border-radius: 0 12px 12px 0;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Manrope', sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.deliverables__bonus-label {
+  font-weight: 700;
+  color: #0088cc;
+}
+
+/* Адаптив ЭКРАН 4 */
+@media (max-width: 768px) {
+  .deliverables {
+    padding: 70px 20px;
+  }
+
+  .deliverables__title {
+    font-size: 32px;
+  }
+
+  .deliverables__subtitle {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+
+  .deliverables__text {
+    font-size: 16px;
+  }
+
+  .deliverables__bonus {
+    padding: 24px;
+    font-size: 16px;
+  }
+}
     </style>
 </head>
 <body>
@@ -362,7 +467,7 @@
             </div>
             <div class="step">
                 <span class="step-name">Финал</span>
-                <span class="step-desc">— получает диагноз + 3 конкретных шага</span>
+                <span class="step-desc">— получает диагноз + 3 конкретных шага, что делать дальше</span>
             </div>
             <div class="step">
                 <span class="step-name">Мягкий CTA</span>
@@ -378,6 +483,58 @@
             </p>
         </div>
     </div>
+</section>
+
+<!-- ЭКРАН 4 — ЧТО ВЫ ПОЛУЧАЕТЕ -->
+<section class="deliverables">
+  <div class="container">
+    <h2 class="deliverables__title">Вам не нужно ничего придумывать</h2>
+    <p class="deliverables__subtitle">Обсуждаем продукты и стиль — я делаю всё остальное:</p>
+
+    <ul class="deliverables__list">
+      <li class="deliverables__item">
+        <span class="deliverables__check">✓</span>
+        <div class="deliverables__text">
+          <strong>Сценарий мини-сериала</strong> — с эпизодами, неожиданным поворотом и 3–5 финалами под разные сегменты аудитории (мотив/барьер/готовность)
+        </div>
+      </li>
+      <li class="deliverables__item">
+        <span class="deliverables__check">✓</span>
+        <div class="deliverables__text">
+          <strong>Тексты вашим голосом</strong> — бот звучит как вы, а не как шаблон
+        </div>
+      </li>
+      <li class="deliverables__item">
+        <span class="deliverables__check">✓</span>
+        <div class="deliverables__text">
+          <strong>Готовый Telegram-бот</strong> — под вашим именем и аватаром
+        </div>
+      </li>
+      <li class="deliverables__item">
+        <span class="deliverables__check">✓</span>
+        <div class="deliverables__text">
+          <strong>CTA в ваш продукт</strong> — заявка, созвон, лист ожидания, консультация, разбор, группа, программа
+        </div>
+      </li>
+      <li class="deliverables__item">
+        <span class="deliverables__check">✓</span>
+        <div class="deliverables__text">
+          <strong>Инструкция "как вести трафик"</strong>, чтобы людям был интересен ваш контент
+        </div>
+      </li>
+      <li class="deliverables__item">
+        <span class="deliverables__check">✓</span>
+        <div class="deliverables__text">
+          <strong>Рекомендации по метрикам:</strong> что смотреть и докручивать
+        </div>
+      </li>
+    </ul>
+
+    <div class="deliverables__bonus">
+      <span class="deliverables__bonus-label">Побочный эффект:</span>
+      каждый "подозреваемый" из квиза = тема для поста, рилса, эфира. У вас появляется свой контент-завод.
+    </div>
+  </div>
 </section>
 </body>
 </html>
