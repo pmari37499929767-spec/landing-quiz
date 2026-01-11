@@ -781,6 +781,135 @@
     font-size: 24px;
   }
 }
+
+/* ЭКРАН 8 — КАК МЫ РАБОТАЕМ */
+.process {
+  padding: 100px 20px;
+  background: #ffffff;
+}
+
+.process__title {
+  font-family: 'Manrope', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.process__steps {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+}
+
+.process__step {
+  display: flex;
+  gap: 24px;
+  padding-bottom: 40px;
+  position: relative;
+}
+
+.process__step:last-child {
+  padding-bottom: 0;
+}
+
+/* Вертикальная линия между шагами */
+.process__step::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 50px;
+  bottom: 0;
+  width: 2px;
+  background: #e0e0e0;
+}
+
+.process__step:last-child::before {
+  display: none;
+}
+
+.process__number {
+  width: 42px;
+  height: 42px;
+  background: #0088cc;
+  color: #fff;
+  font-family: 'Manrope', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.process__content {
+  flex-grow: 1;
+  padding-top: 6px;
+}
+
+.process__name {
+  font-family: 'Manrope', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+}
+
+.process__time {
+  font-weight: 400;
+  color: #555;
+}
+
+.process__desc {
+  font-family: 'Manrope', sans-serif;
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Адаптив ЭКРАН 8 */
+@media (max-width: 768px) {
+  .process {
+    padding: 70px 20px;
+  }
+
+  .process__title {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+
+  .process__step {
+    gap: 18px;
+    padding-bottom: 32px;
+  }
+
+  .process__step::before {
+    left: 17px;
+    top: 44px;
+  }
+
+  .process__number {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+
+  .process__name {
+    font-size: 18px;
+  }
+
+  .process__desc {
+    font-size: 15px;
+  }
+}
     </style>
 </head>
 <body>
@@ -1080,6 +1209,57 @@
       <p class="packages__cta-text">Не знаете, какой вариант вам подходит? <a href="https://t.me/promt_sos" class="packages__link">Напишите</a> — разберёмся за 15 минут.</p>
     </div>
 
+  </div>
+</section>
+
+<!-- ЭКРАН 8 — КАК МЫ РАБОТАЕМ -->
+<section class="process">
+  <div class="container">
+    <h2 class="process__title">Работаем прозрачно, без сюрпризов</h2>
+
+    <div class="process__steps">
+
+      <div class="process__step">
+        <div class="process__number">1</div>
+        <div class="process__content">
+          <h3 class="process__name">Бриф <span class="process__time">(15–25 минут)</span></h3>
+          <p class="process__desc">Созваниваемся или переписываемся. Узнаю вашу нишу, аудиторию, продукты, тон общения.</p>
+        </div>
+      </div>
+
+      <div class="process__step">
+        <div class="process__number">2</div>
+        <div class="process__content">
+          <h3 class="process__name">Сценарий</h3>
+          <p class="process__desc">Прописываю сюжет и финалы под вашу реальность. Вы видите каждый вопрос до сборки, согласовываете, делаем 2 круга правок.</p>
+        </div>
+      </div>
+
+      <div class="process__step">
+        <div class="process__number">3</div>
+        <div class="process__content">
+          <h3 class="process__name">Сборка вашей версии</h3>
+          <p class="process__desc">Название, аватар, стиль речи и финальный оффер — ваши. Я настраиваю сценарную механику продаж.</p>
+        </div>
+      </div>
+
+      <div class="process__step">
+        <div class="process__number">4</div>
+        <div class="process__content">
+          <h3 class="process__name">Тест</h3>
+          <p class="process__desc">Проверяем логику, ветки, тексты, CTA. Вносим 2 круга правок.</p>
+        </div>
+      </div>
+
+      <div class="process__step">
+        <div class="process__number">5</div>
+        <div class="process__content">
+          <h3 class="process__name">Запуск + инструкции</h3>
+          <p class="process__desc">Отдаю готовый бот и объясняю, как вести трафик.</p>
+        </div>
+      </div>
+
+    </div>
   </div>
 </section>
 </body>
