@@ -469,6 +469,318 @@
     font-size: 15px;
   }
 }
+
+/* ЭКРАН 6 — ДЛЯ КОГО / НЕ ДЛЯ КОГО */
+.audience {
+  padding: 100px 20px;
+  background: #ffffff;
+}
+
+.audience__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.audience__block {
+  padding: 40px;
+  border-radius: 16px;
+}
+
+.audience__block--yes {
+  background: #f0f9f4;
+  border: 2px solid #d4edda;
+}
+
+.audience__block--no {
+  background: #fdf5f5;
+  border: 2px solid #f5d4d4;
+}
+
+.audience__title {
+  font-family: 'Manrope', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 28px;
+  line-height: 1.3;
+}
+
+.audience__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.audience__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  font-family: 'Manrope', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.audience__icon {
+  font-size: 18px;
+  font-weight: 700;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.audience__icon--yes {
+  color: #28a745;
+  background: #d4edda;
+}
+
+.audience__icon--no {
+  color: #dc3545;
+  background: #f5d4d4;
+}
+
+/* Адаптив ЭКРАН 6 */
+@media (max-width: 768px) {
+  .audience {
+    padding: 70px 20px;
+  }
+
+  .audience__grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .audience__block {
+    padding: 30px;
+  }
+
+  .audience__title {
+    font-size: 22px;
+  }
+
+  .audience__item {
+    font-size: 15px;
+  }
+}
+
+/* ЭКРАН 7 — ПАКЕТЫ */
+.packages {
+  padding: 100px 20px;
+  background: #f5f7fa;
+}
+
+.packages__title {
+  font-family: 'Manrope', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.packages__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.packages__card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 36px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  border: 2px solid transparent;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.packages__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.packages__card--featured {
+  border-color: #0088cc;
+  position: relative;
+}
+
+.packages__card--featured::before {
+  content: "Популярный";
+  position: absolute;
+  top: -12px;
+  right: 24px;
+  background: #0088cc;
+  color: #fff;
+  font-family: 'Manrope', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+.packages__header {
+  margin-bottom: 16px;
+}
+
+.packages__label {
+  font-family: 'Manrope', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #0088cc;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.packages__name {
+  font-family: 'Manrope', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-top: 8px;
+}
+
+.packages__desc {
+  font-family: 'Manrope', sans-serif;
+  font-size: 15px;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+.packages__section {
+  flex-grow: 1;
+}
+
+.packages__section-title {
+  font-family: 'Manrope', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 12px;
+}
+
+.packages__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.packages__list li {
+  font-family: 'Manrope', sans-serif;
+  font-size: 15px;
+  color: #333;
+  line-height: 1.5;
+  padding-left: 20px;
+  position: relative;
+}
+
+.packages__list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #0088cc;
+  font-weight: 700;
+}
+
+.packages__footer {
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.packages__term {
+  font-family: 'Manrope', sans-serif;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.packages__term strong {
+  color: #1a1a1a;
+}
+
+.packages__price {
+  font-family: 'Manrope', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #0088cc;
+}
+
+.packages__note {
+  max-width: 700px;
+  margin: 50px auto 0;
+  text-align: center;
+}
+
+.packages__note p {
+  font-family: 'Manrope', sans-serif;
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.packages__cta-text {
+  font-size: 16px;
+  color: #1a1a1a;
+}
+
+.packages__link {
+  color: #0088cc;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.packages__link:hover {
+  border-bottom-color: #0088cc;
+}
+
+/* Адаптив ЭКРАН 7 */
+@media (max-width: 768px) {
+  .packages {
+    padding: 70px 20px;
+  }
+
+  .packages__title {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+
+  .packages__grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .packages__card {
+    padding: 28px;
+  }
+
+  .packages__name {
+    font-size: 22px;
+  }
+
+  .packages__price {
+    font-size: 24px;
+  }
+}
     </style>
 </head>
 <body>
@@ -652,6 +964,122 @@
         <p class="demo__caption">ведёт в консультацию без давления</p>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ЭКРАН 6 — ДЛЯ КОГО / НЕ ДЛЯ КОГО -->
+<section class="audience">
+  <div class="container">
+    <div class="audience__grid">
+
+      <div class="audience__block audience__block--yes">
+        <h2 class="audience__title">Для кого Telegram-квиз — хороший помощник?</h2>
+        <ul class="audience__list">
+          <li class="audience__item">
+            <span class="audience__icon audience__icon--yes">✓</span>
+            <span>Эксперт, психолог, коуч, наставник</span>
+          </li>
+          <li class="audience__item">
+            <span class="audience__icon audience__icon--yes">✓</span>
+            <span>Ваш продукт: консультации, разборы, группы, программы</span>
+          </li>
+          <li class="audience__item">
+            <span class="audience__icon audience__icon--yes">✓</span>
+            <span>Аудитория есть, но заявки нестабильны или «холодные»</span>
+          </li>
+          <li class="audience__item">
+            <span class="audience__icon audience__icon--yes">✓</span>
+            <span>Устали от прогревов и хотите интерактив, который реально проходят</span>
+          </li>
+          <li class="audience__item">
+            <span class="audience__icon audience__icon--yes">✓</span>
+            <span>Готовите событие в ближайшие 2–6 недель: запуск, набор, вебинар</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="audience__block audience__block--no">
+        <h2 class="audience__title">Не подходит, если:</h2>
+        <ul class="audience__list">
+          <li class="audience__item">
+            <span class="audience__icon audience__icon--no">✗</span>
+            <span>Нет чётких продуктов (непонятно, что продаёте)</span>
+          </li>
+          <li class="audience__item">
+            <span class="audience__icon audience__icon--no">✗</span>
+            <span>Хотите «просто собрать телефоны» без смысла</span>
+          </li>
+          <li class="audience__item">
+            <span class="audience__icon audience__icon--no">✗</span>
+            <span>Ищете бота за 5 000 ₽ по шаблону</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ЭКРАН 7 — ПАКЕТЫ -->
+<section class="packages">
+  <div class="container">
+    <h2 class="packages__title">Два варианта совместной работы:</h2>
+
+    <div class="packages__grid">
+
+      <div class="packages__card">
+        <div class="packages__header">
+          <span class="packages__label">Пакет A</span>
+          <h3 class="packages__name">Внедрение</h3>
+        </div>
+        <p class="packages__desc">Для тех, кто хочет быстро внедрить работающую механику без лишних телодвижений.</p>
+
+        <div class="packages__section">
+          <p class="packages__section-title">Что входит:</p>
+          <ul class="packages__list">
+            <li>Сценарий мини-сериала с ветвлениями</li>
+            <li>Сборка Telegram-бота под ваш бренд</li>
+            <li>3 сегмента аудитории + финалы под каждый</li>
+            <li>2 раунда правок</li>
+            <li>Запуск + базовая аналитика</li>
+          </ul>
+        </div>
+
+        <div class="packages__footer">
+          <div class="packages__term">Срок: <strong>10–14 дней</strong></div>
+          <div class="packages__price">от 19 900 ₽</div>
+        </div>
+      </div>
+
+      <div class="packages__card packages__card--featured">
+        <div class="packages__header">
+          <span class="packages__label">Пакет B</span>
+          <h3 class="packages__name">Внедрение + Усиление входа</h3>
+        </div>
+        <p class="packages__desc">Для тех, кто хочет не только бота, но и трафик в него.</p>
+
+        <div class="packages__section">
+          <p class="packages__section-title">Всё из пакета A, плюс:</p>
+          <ul class="packages__list">
+            <li>6–10 текстов/сценариев, которые ведут человека в квиз и к заявке</li>
+            <li>10 сообщений для возбуждения интереса</li>
+            <li>Мини-отчёт «что докрутить по конверсии» после первых 50 прохождений</li>
+          </ul>
+        </div>
+
+        <div class="packages__footer">
+          <div class="packages__term">Срок: <strong>14–20 дней</strong></div>
+          <div class="packages__price">от 39 900 ₽</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="packages__note">
+      <p>Сроки выполнения зависят от скорости согласований. Точная стоимость работы — от объёма: количества эпизодов/сегментов и задач по входу. Смета и ТЗ — после короткого брифа.</p>
+      <p class="packages__cta-text">Не знаете, какой вариант вам подходит? <a href="https://t.me/promt_sos" class="packages__link">Напишите</a> — разберёмся за 15 минут.</p>
+    </div>
+
   </div>
 </section>
 </body>
